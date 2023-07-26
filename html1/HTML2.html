@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跳动文字</title>
+  <style>
+    .loading-mask{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+    }
+    .loading-text{
+      color: #fff;
+      font-size: 32px;
+    }
+    @keyframes  upDown {
+      0% {
+        transform: translateY(0px);
+      }
+      20% {
+        transform: translateY(-24px);
+      }
+      40% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    .loading-text span{
+      display: inline-block;
+      animation: upDown 1.5s ease-in-out infinite;
+    }
+    .loading-text span{
+      animation-delay: calc(.1s*var(--i));
+    }
+  </style>
+</head>
+<body>
+    <div class="loading-mask">
+      <div  class="loading-text">
+          <span style="--i:1">郭</span>
+          <span style="--i:2">丙</span>
+          <span style="--i:3">哼</span>
+          <span style="--i:4">是</span>
+          <span style="--i:5">啥</span>
+          <span style="--i:6">比</span>
+          <span style="--i:7">。</span>
+          <span style="--i:8">。</span>
+          <span style="--i:9">。</span>
+          <span style="--i:10">。</span>
+      </div>
+    </div>
+</body>
+</html>
