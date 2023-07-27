@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>输入框动态</title>
+  <style>
+    .inputBox{
+      position: relative;
+      width: 250px;
+    }
+    .inputBox input{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      outline: none;
+    }
+    .inputBox span{
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 10px;
+      font-size: 1em;
+      pointer-events: none;
+      color: #cccccc;
+    }
+    .inputBox input:valid ~ span,
+    .inputBox input:focus ~ span{
+      color: orange;
+      transform: translateX(10px) translateY(-7px);
+      font-size: 0.65em;
+      padding: 0 10px;
+      background-color: #ffffff;
+    }
+    .inputBox span{
+      transition: all 0.5s;
+    }
+  </style>
+</head>
+<body>
+    <div class="inputBox">
+      <input type="text" required>
+      <span>你的名字</span>
+    </div>
+</body>
+</html>
